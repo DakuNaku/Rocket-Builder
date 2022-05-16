@@ -19,6 +19,7 @@ public class ButtonClicked : MonoBehaviour
     public Button tipSmall;
     public Button tipRegular;
     public Button tipLarge;
+    public Button rocketcontrolSmall;
 
     //GameObjects
     public GameObject SmallT;
@@ -33,6 +34,7 @@ public class ButtonClicked : MonoBehaviour
     public GameObject SmallTi;
     public GameObject RegularTi;
     public GameObject LargeTi;
+    public GameObject SmallR;
 
     //Spawn Points
     public Transform spawnPointST;
@@ -47,6 +49,7 @@ public class ButtonClicked : MonoBehaviour
     public Transform spawnPointSTi;
     public Transform spawnPointRTi;
     public Transform spawnPointLTi;
+    public Transform spawnPointSR;
     #endregion
     // Start is called before the first frame update
     //Just says if a button x is clicked spawn the conrasponding gameobject
