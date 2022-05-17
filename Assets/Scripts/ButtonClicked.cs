@@ -20,6 +20,8 @@ public class ButtonClicked : MonoBehaviour
     public Button tipRegular;
     public Button tipLarge;
     public Button rocketcontrolSmall;
+    public Button rocketcontrolRegular;
+    public Button rocketcontrolLarge;
 
     //GameObjects
     public GameObject SmallT;
@@ -35,6 +37,8 @@ public class ButtonClicked : MonoBehaviour
     public GameObject RegularTi;
     public GameObject LargeTi;
     public GameObject SmallR;
+    public GameObject RegularR;
+    public GameObject LargeR;
 
     //Spawn Points
     public Transform spawnPointST;
@@ -50,6 +54,8 @@ public class ButtonClicked : MonoBehaviour
     public Transform spawnPointRTi;
     public Transform spawnPointLTi;
     public Transform spawnPointSR;
+    public Transform spawnPointRR;
+    public Transform spawnPointLR;
     #endregion
     // Start is called before the first frame update
     //Just says if a button x is clicked spawn the conrasponding gameobject
@@ -67,6 +73,9 @@ public class ButtonClicked : MonoBehaviour
         tipSmall.onClick.AddListener(GenerateSTi);
         tipRegular.onClick.AddListener(GenerateRTi);
         tipLarge.onClick.AddListener(GenerateLTi);
+        rocketcontrolSmall.onClick.AddListener(GenerateSR);
+        rocketcontrolRegular.onClick.AddListener(GenerateRR);
+        rocketcontrolLarge.onClick.AddListener(GenerateLR);
     }
     //Spawner region's
     #region Thruster Spawn
@@ -74,6 +83,7 @@ public class ButtonClicked : MonoBehaviour
     void GenerateST()
     {
         Instantiate(SmallT, spawnPointST.transform);
+        Debug.Log("thruster working");
     }
 
     //spawns regular thruster
@@ -94,6 +104,7 @@ public class ButtonClicked : MonoBehaviour
     void GenerateSC()
     {
         Instantiate(SmallC, spawnPointSC.transform);
+        Debug.Log("connector working");
     }
     //spawns regular connecter
     void GenerateRC()
@@ -112,6 +123,7 @@ public class ButtonClicked : MonoBehaviour
     void GenerateSF()
     {
         Instantiate(SmallF, spawnPointSF.transform);
+        Debug.Log("fuel working");
     }
     //spawns regular fuel
     void GenerateRF()
@@ -130,6 +142,7 @@ public class ButtonClicked : MonoBehaviour
     void GenerateSTi()
     {
         Instantiate(SmallTi, spawnPointSTi.transform);
+        Debug.Log("tip working");
     }
     //spawns regular tip
     void GenerateRTi()
@@ -140,6 +153,25 @@ public class ButtonClicked : MonoBehaviour
     void GenerateLTi()
     {
         Instantiate(LargeTi, spawnPointLTi.transform);
+    }
+    #endregion
+
+    #region Rocket Control Spawn
+    //spawns small rocket control
+    void GenerateSR()
+    {
+        Instantiate(SmallR, spawnPointSR.transform);
+        Debug.Log("rocket control is working");
+    }
+    //spawns regular rocket control
+    void GenerateRR()
+    {
+        Instantiate(RegularR, spawnPointRR.transform);
+    }
+    //spawns small rocket control
+    void GenerateLR()
+    {
+        Instantiate(LargeR, spawnPointLR.transform);
     }
     #endregion
 }

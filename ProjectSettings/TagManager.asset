@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - conneter
+  - fuel
+  - tip
+  - thruster
+  - rocket control
   layers:
   - Default
   - TransparentFX
