@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FuelCapacity: 20
   FuelTankWieght: 2
-  fuel: {fileID: 0}
+  fuel: {fileID: 7377484485775026749, guid: ec1c1584d4ff21a4f91bd4e8ab8ade9a, type: 3}
