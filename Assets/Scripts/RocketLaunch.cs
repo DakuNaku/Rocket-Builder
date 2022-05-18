@@ -26,7 +26,8 @@ public class RocketLaunch : MonoBehaviour
 
             if (hitinfo.transform.tag == "tip")
             {
-                Debug.Log("raycast HIT");
+                //Debug.Log("raycast HIT");
+                transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
             else if (hitinfo.transform.tag == "conneter")
             {

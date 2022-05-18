@@ -22,6 +22,7 @@ public class ButtonClicked : MonoBehaviour
     public Button rocketcontrolSmall;
     public Button rocketcontrolRegular;
     public Button rocketcontrolLarge;
+    public Button lauch;
 
     //GameObjects
     public GameObject SmallT;
@@ -39,6 +40,23 @@ public class ButtonClicked : MonoBehaviour
     public GameObject SmallR;
     public GameObject RegularR;
     public GameObject LargeR;
+
+    //In Game Objects;
+    GameObject smallThruster;
+    GameObject mediumThruster;
+    GameObject largeThruster;
+    GameObject smallConnector;
+    GameObject mediumConnector;
+    GameObject largeConnector;
+    GameObject smallFuel;
+    GameObject mediumFuel;
+    GameObject largeFule;
+    GameObject smallRocketControl;
+    GameObject mediumRocketControl;
+    GameObject largeRocketControl;
+    GameObject smallTip;
+    GameObject mediumTip;
+    GameObject largeTip;
 
     //Spawn Points
     public Transform spawnPointST;
@@ -82,20 +100,24 @@ public class ButtonClicked : MonoBehaviour
     //spawns small thruster
     void GenerateST()
     {
-        Instantiate(SmallT, spawnPointST.transform);
-        Debug.Log("thruster working");
+        Destroy(mediumThruster, 0.0f);
+        Destroy(largeThruster, 0.0f);
+        smallThruster = Instantiate(SmallT, spawnPointST.transform);
+       // Debug.Log("thruster working");
     }
 
     //spawns regular thruster
     void GenerateRT()
     {
-        Instantiate(RegularT, spawnPointRT.transform);
+        Destroy(smallThruster, 0.0f);
+        Destroy(largeThruster, 0.0f);
+        mediumThruster = Instantiate(RegularT, spawnPointRT.transform);
     }
-
     //spawns large thruster
     void GenerateLT()
     {
-        Instantiate(LargeT, spawnPointLT.transform);
+
+        largeThruster = Instantiate(LargeT, spawnPointLT.transform);
     }
     #endregion
 
@@ -103,8 +125,9 @@ public class ButtonClicked : MonoBehaviour
     //spawns small connecter
     void GenerateSC()
     {
-        Instantiate(SmallC, spawnPointSC.transform);
-        Debug.Log("connector working");
+
+        smallConnector = Instantiate(SmallC, spawnPointSC.transform);
+       // Debug.Log("connector working");
     }
     //spawns regular connecter
     void GenerateRC()
@@ -123,7 +146,7 @@ public class ButtonClicked : MonoBehaviour
     void GenerateSF()
     {
         Instantiate(SmallF, spawnPointSF.transform);
-        Debug.Log("fuel working");
+       // Debug.Log("fuel working");
     }
     //spawns regular fuel
     void GenerateRF()
@@ -142,7 +165,7 @@ public class ButtonClicked : MonoBehaviour
     void GenerateSTi()
     {
         Instantiate(SmallTi, spawnPointSTi.transform);
-        Debug.Log("tip working");
+        //Debug.Log("tip working");
     }
     //spawns regular tip
     void GenerateRTi()
@@ -160,13 +183,16 @@ public class ButtonClicked : MonoBehaviour
     //spawns small rocket control
     void GenerateSR()
     {
-        Instantiate(SmallR, spawnPointSR.transform);
-        Debug.Log("rocket control is working");
+        Destroy(mediumRocketControl, 0.0f);
+        smallRocketControl = Instantiate(SmallR, spawnPointSR.transform);
+
+        //Debug.Log("rocket control is working");
     }
     //spawns regular rocket control
     void GenerateRR()
     {
-        Instantiate(RegularR, spawnPointRR.transform);
+        Destroy(smallRocketControl, 0.0f);
+        mediumRocketControl = Instantiate(RegularR, spawnPointRR.transform);
     }
     //spawns small rocket control
     void GenerateLR()
@@ -174,4 +200,12 @@ public class ButtonClicked : MonoBehaviour
         Instantiate(LargeR, spawnPointLR.transform);
     }
     #endregion
+
+    // launch shit
+    void Launch()
+    {
+        smallConnector.transform.parent = smallRocketControl.transform;
+
+      
+    }
 }
