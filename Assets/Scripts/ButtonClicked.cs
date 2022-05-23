@@ -9,8 +9,9 @@ public class ButtonClicked : MonoBehaviour
 
     public Camera main;
 
-    public float wieght;
+    public float rocketWieght;
     public float thrustValue;
+    private float realThrust;
 
     //UI Button
     public Button thrusterSmall;
@@ -87,6 +88,8 @@ public class ButtonClicked : MonoBehaviour
     //Just says if a button x is clicked spawn the conrasponding gameobject
     void Start()
     {
+        realThrust = thrustValue - rocketWieght;
+
         thrusterSmall.onClick.AddListener(GenerateST);
         thrusterRegular.onClick.AddListener(GenerateRT);
         thrusterLarge.onClick.AddListener(GenerateLT);
@@ -240,23 +243,21 @@ public class ButtonClicked : MonoBehaviour
     {
         Debug.Log("im working");
 
-        smallConnector.transform.parent = smallRocketControl.transform;
-        smallFuel.transform.parent = smallRocketControl.transform;
-        smallThruster.transform.parent = smallRocketControl.transform;
-        smallTip.transform.parent = smallRocketControl.transform;
+        if (smallConnector != null) { smallConnector.transform.parent = smallRocketControl.transform; }
+        if (smallFuel != null) { smallFuel.transform.parent = smallRocketControl.transform; }
+        if (smallThruster != null) { smallThruster.transform.parent = smallRocketControl.transform; }
+        if (smallTip != null) { smallTip.transform.parent = smallRocketControl.transform; }
 
-        //if (mediumConnector != null)
-        //{
-        //    mediumConnector.transform.parent = mediumRocketControl.transform;
-        //}
-        //mediumFuel.transform.parent = mediumRocketControl.transform;
-        //mediumThruster.transform.parent = mediumRocketControl.transform;
-        //mediumTip.transform.parent = mediumRocketControl.transform;
+        if (mediumConnector != null) { mediumConnector.transform.parent = mediumRocketControl.transform; }
+        if (mediumFuel != null) { mediumFuel.transform.parent = mediumRocketControl.transform; }
+        if (mediumThruster != null) { mediumThruster.transform.parent = mediumRocketControl.transform; }
+        if (mediumTip != null) { mediumTip.transform.parent = mediumRocketControl.transform; }
 
-        //largeConnector.transform.parent = largeRocketControl.transform;
-        //largeFuel.transform.parent = largeRocketControl.transform;
-        //largeThruster.transform.parent = largeRocketControl.transform;
-        //largeTip.transform.parent = largeRocketControl.transform;
+
+        if (largeConnector != null) { largeConnector.transform.parent = largeRocketControl.transform; }
+        if (largeFuel != null) { largeFuel.transform.parent = largeRocketControl.transform; }
+        if (largeThruster != null) { largeThruster.transform.parent = largeRocketControl.transform; }
+        if (largeTip != null) { largeTip.transform.parent = largeRocketControl.transform; }
 
         #region Camera follow
         if (smallRocketControl != null)
@@ -274,7 +275,7 @@ public class ButtonClicked : MonoBehaviour
         }
         #endregion
 
-        ParentObject.GetComponent<Rigidbody>().velocity = Vector3.up * 100.0f;
+        ParentObject.GetComponent<Rigidbody>().velocity = Vector3.up * realThrust;
         // thrusterSmall.SetActive(false);
 
     }

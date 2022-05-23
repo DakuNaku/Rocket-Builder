@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 22265625}
   - component: {fileID: 22265624}
   - component: {fileID: 22265623}
-  - component: {fileID: 22265622}
   m_Layer: 5
   m_Name: Small Thruster
   m_TagString: Untagged
@@ -163,18 +162,6 @@ RectTransform:
   m_AnchoredPosition: {x: 91, y: -173}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &22265622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22265620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &22265623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,7 +448,6 @@ GameObject:
   - component: {fileID: 218577545}
   - component: {fileID: 218577544}
   - component: {fileID: 218577543}
-  - component: {fileID: 218577542}
   m_Layer: 5
   m_Name: Launch
   m_TagString: Untagged
@@ -489,18 +475,6 @@ RectTransform:
   m_AnchoredPosition: {x: 411.80002, y: -207.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &218577542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218577540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &218577543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,7 +708,6 @@ GameObject:
   - component: {fileID: 428593472}
   - component: {fileID: 428593471}
   - component: {fileID: 428593470}
-  - component: {fileID: 428593469}
   m_Layer: 5
   m_Name: Regular Fuel
   m_TagString: Untagged
@@ -762,18 +735,6 @@ RectTransform:
   m_AnchoredPosition: {x: 251.40002, y: -106.000015}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &428593469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 428593467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &428593470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -977,7 +938,6 @@ GameObject:
   - component: {fileID: 506290488}
   - component: {fileID: 506290487}
   - component: {fileID: 506290486}
-  - component: {fileID: 506290485}
   m_Layer: 5
   m_Name: Regular RocketControl
   m_TagString: Untagged
@@ -1005,18 +965,6 @@ RectTransform:
   m_AnchoredPosition: {x: 251.40002, y: -71.90001}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &506290485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 506290483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &506290486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,7 +1217,6 @@ GameObject:
   - component: {fileID: 679813921}
   - component: {fileID: 679813920}
   - component: {fileID: 679813919}
-  - component: {fileID: 679813918}
   m_Layer: 5
   m_Name: 'Regular Tip '
   m_TagString: Untagged
@@ -1297,18 +1244,6 @@ RectTransform:
   m_AnchoredPosition: {x: 251.40002, y: -39.800003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &679813918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679813916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &679813919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1403,7 +1338,6 @@ GameObject:
   - component: {fileID: 685164609}
   - component: {fileID: 685164608}
   - component: {fileID: 685164607}
-  - component: {fileID: 685164606}
   m_Layer: 5
   m_Name: Small Connecter
   m_TagString: Untagged
@@ -1431,18 +1365,6 @@ RectTransform:
   m_AnchoredPosition: {x: 91, y: -140.40001}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &685164606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685164604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &685164607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1537,7 +1459,6 @@ GameObject:
   - component: {fileID: 703724293}
   - component: {fileID: 703724292}
   - component: {fileID: 703724291}
-  - component: {fileID: 703724290}
   m_Layer: 5
   m_Name: Regular Connecter
   m_TagString: Untagged
@@ -1565,18 +1486,6 @@ RectTransform:
   m_AnchoredPosition: {x: 251.40002, y: -140.40001}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &703724290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703724288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &703724291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,7 +1580,6 @@ GameObject:
   - component: {fileID: 756297580}
   - component: {fileID: 756297579}
   - component: {fileID: 756297581}
-  - component: {fileID: 756297578}
   m_Layer: 5
   m_Name: Regular Thruster
   m_TagString: Untagged
@@ -1699,18 +1607,6 @@ RectTransform:
   m_AnchoredPosition: {x: 251.40002, y: -173}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &756297578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 756297576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &756297579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1952,8 +1848,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 2128968911}
-  wieght: 0
-  thrustValue: 0
+  rocketWieght: 2
+  thrustValue: 20
   thrusterSmall: {fileID: 22265623}
   thrusterRegular: {fileID: 756297581}
   thrusterLarge: {fileID: 1363387064}
@@ -2013,7 +1909,6 @@ GameObject:
   - component: {fileID: 890349515}
   - component: {fileID: 890349514}
   - component: {fileID: 890349513}
-  - component: {fileID: 890349512}
   m_Layer: 5
   m_Name: Large RocketControl
   m_TagString: Untagged
@@ -2041,18 +1936,6 @@ RectTransform:
   m_AnchoredPosition: {x: 411.80002, y: -71.600006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &890349512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890349510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &890349513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2495,7 +2378,6 @@ GameObject:
   - component: {fileID: 1210562979}
   - component: {fileID: 1210562978}
   - component: {fileID: 1210562977}
-  - component: {fileID: 1210562976}
   m_Layer: 5
   m_Name: Large Fuel
   m_TagString: Untagged
@@ -2523,18 +2405,6 @@ RectTransform:
   m_AnchoredPosition: {x: 411.80002, y: -105.70001}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1210562976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1210562974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1210562977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2629,7 +2499,6 @@ GameObject:
   - component: {fileID: 1363387067}
   - component: {fileID: 1363387065}
   - component: {fileID: 1363387064}
-  - component: {fileID: 1363387066}
   m_Layer: 5
   m_Name: 'Large Thruster '
   m_TagString: Untagged
@@ -2711,18 +2580,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1363387066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1363387063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!222 &1363387067
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2965,7 +2822,6 @@ GameObject:
   - component: {fileID: 1505781255}
   - component: {fileID: 1505781254}
   - component: {fileID: 1505781253}
-  - component: {fileID: 1505781252}
   m_Layer: 5
   m_Name: Large Connecter
   m_TagString: Untagged
@@ -2993,18 +2849,6 @@ RectTransform:
   m_AnchoredPosition: {x: 411.80002, y: -140.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1505781252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505781250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1505781253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3257,7 +3101,6 @@ GameObject:
   - component: {fileID: 1755701013}
   - component: {fileID: 1755701012}
   - component: {fileID: 1755701011}
-  - component: {fileID: 1755701010}
   m_Layer: 5
   m_Name: Small Fuel
   m_TagString: Untagged
@@ -3285,18 +3128,6 @@ RectTransform:
   m_AnchoredPosition: {x: 91, y: -106.000015}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1755701010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755701008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1755701011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3470,7 +3301,6 @@ GameObject:
   - component: {fileID: 1864954098}
   - component: {fileID: 1864954097}
   - component: {fileID: 1864954096}
-  - component: {fileID: 1864954095}
   m_Layer: 5
   m_Name: Small RocketControl
   m_TagString: Untagged
@@ -3498,18 +3328,6 @@ RectTransform:
   m_AnchoredPosition: {x: 91, y: -71.90001}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1864954095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864954093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1864954096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3719,7 +3537,6 @@ GameObject:
   - component: {fileID: 1900065497}
   - component: {fileID: 1900065496}
   - component: {fileID: 1900065495}
-  - component: {fileID: 1900065494}
   m_Layer: 5
   m_Name: Large Tip
   m_TagString: Untagged
@@ -3747,18 +3564,6 @@ RectTransform:
   m_AnchoredPosition: {x: 411.80002, y: -39.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1900065494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1900065492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1900065495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3932,7 +3737,6 @@ GameObject:
   - component: {fileID: 2022680929}
   - component: {fileID: 2022680928}
   - component: {fileID: 2022680927}
-  - component: {fileID: 2022680926}
   m_Layer: 5
   m_Name: 'Small Tip '
   m_TagString: Untagged
@@ -3960,18 +3764,6 @@ RectTransform:
   m_AnchoredPosition: {x: 91, y: -39.800003}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2022680926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2022680924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42beb809de488a54ebff1afb7f783686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2022680927
 MonoBehaviour:
   m_ObjectHideFlags: 0
