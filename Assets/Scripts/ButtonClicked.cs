@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class ButtonClicked : MonoBehaviour
 {
     #region Buttons,GameObjets&SpawnPoints
+
+    public Camera main;
+
+    public float wieght;
+    public float thrustValue;
+
     //UI Button
     public Button thrusterSmall;
     public Button thrusterRegular;
@@ -22,7 +28,7 @@ public class ButtonClicked : MonoBehaviour
     public Button rocketcontrolSmall;
     public Button rocketcontrolRegular;
     public Button rocketcontrolLarge;
-    public Button lauch;
+    public Button launch;
 
     //GameObjects
     public GameObject SmallT;
@@ -41,6 +47,8 @@ public class ButtonClicked : MonoBehaviour
     public GameObject RegularR;
     public GameObject LargeR;
 
+    public GameObject ParentObject;
+
     //In Game Objects;
     GameObject smallThruster;
     GameObject mediumThruster;
@@ -50,7 +58,7 @@ public class ButtonClicked : MonoBehaviour
     GameObject largeConnector;
     GameObject smallFuel;
     GameObject mediumFuel;
-    GameObject largeFule;
+    GameObject largeFuel;
     GameObject smallRocketControl;
     GameObject mediumRocketControl;
     GameObject largeRocketControl;
@@ -94,6 +102,7 @@ public class ButtonClicked : MonoBehaviour
         rocketcontrolSmall.onClick.AddListener(GenerateSR);
         rocketcontrolRegular.onClick.AddListener(GenerateRR);
         rocketcontrolLarge.onClick.AddListener(GenerateLR);
+        launch.onClick.AddListener(Launch);
     }
     //Spawner region's
     #region Thruster Spawn
@@ -116,7 +125,8 @@ public class ButtonClicked : MonoBehaviour
     //spawns large thruster
     void GenerateLT()
     {
-
+        Destroy(smallThruster, 0.0f);
+        Destroy(mediumThruster, 0.0f);
         largeThruster = Instantiate(LargeT, spawnPointLT.transform);
     }
     #endregion
@@ -125,19 +135,24 @@ public class ButtonClicked : MonoBehaviour
     //spawns small connecter
     void GenerateSC()
     {
-
+        Destroy(mediumConnector, 0.0f);
+        Destroy(largeConnector, 0.0f);
         smallConnector = Instantiate(SmallC, spawnPointSC.transform);
        // Debug.Log("connector working");
     }
     //spawns regular connecter
     void GenerateRC()
     {
-        Instantiate(RegularC, spawnPointRC.transform);
+        Destroy(smallConnector, 0.0f);
+        Destroy(largeConnector, 0.0f);
+        mediumConnector = Instantiate(RegularC, spawnPointRC.transform);
     }
     //spawns Large connecter
     void GenerateLC()
     {
-        Instantiate(LargeC, spawnPointLC.transform);
+        Destroy(smallConnector, 0.0f);
+        Destroy(mediumConnector, 0.0f);
+        largeConnector = Instantiate(LargeC, spawnPointLC.transform);
     }
     #endregion
 
@@ -145,18 +160,24 @@ public class ButtonClicked : MonoBehaviour
     //spawns small fuel
     void GenerateSF()
     {
-        Instantiate(SmallF, spawnPointSF.transform);
+        Destroy(mediumFuel, 0.0f);
+        Destroy(largeFuel, 0.0f);
+        smallFuel = Instantiate(SmallF, spawnPointSF.transform);
        // Debug.Log("fuel working");
     }
     //spawns regular fuel
     void GenerateRF()
     {
-        Instantiate(RegularF, spawnPointRF.transform);
+        Destroy(smallFuel, 0.0f);
+        Destroy(largeFuel, 0.0f);
+        mediumFuel = Instantiate(RegularF, spawnPointRF.transform);
     }
     //spawns large fuel
     void GenerateLF()
     {
-        Instantiate(LargeF, spawnPointLF.transform);
+        Destroy(smallFuel, 0.0f);
+        Destroy(mediumFuel, 0.0f);
+        largeFuel = Instantiate(LargeF, spawnPointLF.transform);
     }
     #endregion
 
@@ -164,18 +185,24 @@ public class ButtonClicked : MonoBehaviour
     //spawns small tip
     void GenerateSTi()
     {
-        Instantiate(SmallTi, spawnPointSTi.transform);
+        Destroy(mediumTip, 0.0f);
+        Destroy(largeTip, 0.0f);
+        smallTip = Instantiate(SmallTi, spawnPointSTi.transform);
         //Debug.Log("tip working");
     }
     //spawns regular tip
     void GenerateRTi()
     {
-        Instantiate(RegularTi, spawnPointRTi.transform);
+        Destroy(smallTip, 0.0f);
+        Destroy(largeTip, 0.0f);
+        mediumTip = Instantiate(RegularTi, spawnPointRTi.transform);
     }
     //spawns large tip
     void GenerateLTi()
     {
-        Instantiate(LargeTi, spawnPointLTi.transform);
+        Destroy(smallTip, 0.0f);
+        Destroy(mediumTip, 0.0f);
+        largeTip = Instantiate(LargeTi, spawnPointLTi.transform);
     }
     #endregion
 
@@ -184,7 +211,9 @@ public class ButtonClicked : MonoBehaviour
     void GenerateSR()
     {
         Destroy(mediumRocketControl, 0.0f);
+        Destroy(largeRocketControl, 0.0f);
         smallRocketControl = Instantiate(SmallR, spawnPointSR.transform);
+        smallRocketControl.transform.parent = ParentObject.transform;
 
         //Debug.Log("rocket control is working");
     }
@@ -192,20 +221,61 @@ public class ButtonClicked : MonoBehaviour
     void GenerateRR()
     {
         Destroy(smallRocketControl, 0.0f);
+        Destroy(largeRocketControl, 0.0f);
         mediumRocketControl = Instantiate(RegularR, spawnPointRR.transform);
+        mediumConnector.transform.parent = ParentObject.transform;
     }
     //spawns small rocket control
     void GenerateLR()
     {
-        Instantiate(LargeR, spawnPointLR.transform);
+        Destroy(smallRocketControl, 0.0f);
+        Destroy(mediumRocketControl, 0.0f);
+        largeRocketControl = Instantiate(LargeR, spawnPointLR.transform);
+        largeRocketControl.transform.parent = ParentObject.transform;
     }
     #endregion
 
     // launch shit
     void Launch()
     {
-        smallConnector.transform.parent = smallRocketControl.transform;
+        Debug.Log("im working");
 
-      
+        smallConnector.transform.parent = smallRocketControl.transform;
+        smallFuel.transform.parent = smallRocketControl.transform;
+        smallThruster.transform.parent = smallRocketControl.transform;
+        smallTip.transform.parent = smallRocketControl.transform;
+
+        //if (mediumConnector != null)
+        //{
+        //    mediumConnector.transform.parent = mediumRocketControl.transform;
+        //}
+        //mediumFuel.transform.parent = mediumRocketControl.transform;
+        //mediumThruster.transform.parent = mediumRocketControl.transform;
+        //mediumTip.transform.parent = mediumRocketControl.transform;
+
+        //largeConnector.transform.parent = largeRocketControl.transform;
+        //largeFuel.transform.parent = largeRocketControl.transform;
+        //largeThruster.transform.parent = largeRocketControl.transform;
+        //largeTip.transform.parent = largeRocketControl.transform;
+
+        #region Camera follow
+        if (smallRocketControl != null)
+        {
+            Debug.Log("camera being called");
+            main.transform.parent = smallRocketControl.transform;
+        }
+        else if (mediumRocketControl != null)
+        {
+            main.transform.parent = mediumRocketControl.transform;
+        }
+        else if (largeRocketControl != null)
+        {
+            main.transform.parent = largeRocketControl.transform;
+        }
+        #endregion
+
+        ParentObject.GetComponent<Rigidbody>().velocity = Vector3.up * 100.0f;
+        // thrusterSmall.SetActive(false);
+
     }
 }
