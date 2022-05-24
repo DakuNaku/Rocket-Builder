@@ -276,7 +276,22 @@ public class ButtonClicked : MonoBehaviour
         #endregion
 
         ParentObject.GetComponent<Rigidbody>().velocity = Vector3.up * realThrust;
-        // thrusterSmall.SetActive(false);
 
+        thrusterSmall.gameObject.SetActive(false);
+        thrusterRegular.gameObject.SetActive(false);
+        thrusterLarge.gameObject.SetActive(false);
+        connecterSmall.gameObject.SetActive(false);
+        connecterRegular.gameObject.SetActive(false);
+        connecterLarge.gameObject.SetActive(false);
+        fuelSmall.gameObject.SetActive(false);
+        fuelRegular.gameObject.SetActive(false);
+        fuelLarge.gameObject.SetActive(false);
+        rocketcontrolSmall.gameObject.SetActive(false);
+        rocketcontrolRegular.gameObject.SetActive(false);
+        rocketcontrolLarge.gameObject.SetActive(false);
+        tipSmall.gameObject.SetActive(false);
+        tipRegular.gameObject.SetActive(false);
+        tipLarge.gameObject.SetActive(false);
+        launch.gameObject.SetActive(false);
     }
 }
