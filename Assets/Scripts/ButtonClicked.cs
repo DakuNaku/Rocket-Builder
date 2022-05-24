@@ -9,9 +9,12 @@ public class ButtonClicked : MonoBehaviour
 
     public Camera main;
 
+    public Text heightReadOut;
+
     public float rocketWieght;
     public float thrustValue;
     private float realThrust;
+    float rocketHeight;
 
     //UI Button
     public Button thrusterSmall;
@@ -83,12 +86,15 @@ public class ButtonClicked : MonoBehaviour
     public Transform spawnPointSR;
     public Transform spawnPointRR;
     public Transform spawnPointLR;
+
+    private Transform rocket;
     #endregion
     // Start is called before the first frame update
     //Just says if a button x is clicked spawn the conrasponding gameobject
     void Start()
     {
         realThrust = thrustValue - rocketWieght;
+        rocket = ParentObject.transform;
 
         thrusterSmall.onClick.AddListener(GenerateST);
         thrusterRegular.onClick.AddListener(GenerateRT);
@@ -107,6 +113,14 @@ public class ButtonClicked : MonoBehaviour
         rocketcontrolLarge.onClick.AddListener(GenerateLR);
         launch.onClick.AddListener(Launch);
     }
+
+    void Update()
+    {
+            rocketHeight = rocket.position.y;
+            heightReadOut.text = rocketHeight.ToString();
+
+    }
+
     //Spawner region's
     #region Thruster Spawn
     //spawns small thruster
@@ -241,7 +255,7 @@ public class ButtonClicked : MonoBehaviour
     // launch shit
     void Launch()
     {
-        Debug.Log("im working");
+        //Debug.Log("im working");
 
         if (smallConnector != null) { smallConnector.transform.parent = smallRocketControl.transform; }
         if (smallFuel != null) { smallFuel.transform.parent = smallRocketControl.transform; }
