@@ -1859,7 +1859,6 @@ GameObject:
   - component: {fileID: 886652276}
   - component: {fileID: 886652275}
   - component: {fileID: 886652278}
-  - component: {fileID: 886652279}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1928,9 +1927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 2128968911}
-  heightReadOut: {fileID: 0}
+  heightReadOut: {fileID: 374933804}
   rocketWieght: 2
-  thrustValue: 20
+  thrustValue: 50
   thrusterSmall: {fileID: 22265623}
   thrusterRegular: {fileID: 756297581}
   thrusterLarge: {fileID: 1363387064}
@@ -1978,20 +1977,6 @@ MonoBehaviour:
   spawnPointSR: {fileID: 1501518274}
   spawnPointRR: {fileID: 0}
   spawnPointLR: {fileID: 0}
---- !u!114 &886652279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886652274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cd15dd6e12591840830d3403442e512, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Rocket: {fileID: 184570566}
-  heightReadOut: {fileID: 374933804}
 --- !u!1 &890349510
 GameObject:
   m_ObjectHideFlags: 0

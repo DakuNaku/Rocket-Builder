@@ -15,6 +15,8 @@ public class ButtonClicked : MonoBehaviour
     public float thrustValue;
     private float realThrust;
     float rocketHeight;
+    float maxHeight = 0;
+    bool maxReached = false;
 
     //UI Button
     public Button thrusterSmall;
@@ -116,8 +118,28 @@ public class ButtonClicked : MonoBehaviour
 
     void Update()
     {
-            rocketHeight = rocket.position.y;
-            heightReadOut.text = rocketHeight.ToString();
+        if (rocket.position.y > maxHeight)
+        {
+            maxHeight = rocket.position.y;
+        }
+        else
+        {
+            //has reached max height
+            maxReached = true;
+        }
+
+        if(maxReached == true)
+        {
+            //call code that will happen once after reaching max height
+
+            maxReached = false;
+        }
+
+        rocketHeight = rocket.position.y;
+        heightReadOut.text = rocketHeight.ToString();
+
+
+       // if(rocketHeight <= )
 
     }
 
@@ -291,6 +313,7 @@ public class ButtonClicked : MonoBehaviour
 
         ParentObject.GetComponent<Rigidbody>().velocity = Vector3.up * realThrust;
 
+        #region UI buttons off 
         thrusterSmall.gameObject.SetActive(false);
         thrusterRegular.gameObject.SetActive(false);
         thrusterLarge.gameObject.SetActive(false);
@@ -307,5 +330,6 @@ public class ButtonClicked : MonoBehaviour
         tipRegular.gameObject.SetActive(false);
         tipLarge.gameObject.SetActive(false);
         launch.gameObject.SetActive(false);
+        #endregion
     }
 }
