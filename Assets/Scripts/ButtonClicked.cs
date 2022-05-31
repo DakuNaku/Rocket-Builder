@@ -138,6 +138,7 @@ public class ButtonClicked : MonoBehaviour
 
         if(maxReached == true)
         {
+            // if i have time make a high scroe tracker.
             //call code that will happen once after reaching max height
 
             maxReached = false;
