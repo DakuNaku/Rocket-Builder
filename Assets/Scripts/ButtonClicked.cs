@@ -10,6 +10,7 @@ public class ButtonClicked : MonoBehaviour
     public Camera main;
 
     public Text heightReadOut;
+    public Text maxHeightReached;
 
     public float rocketWieght;
     public float thrustValue;
@@ -35,6 +36,9 @@ public class ButtonClicked : MonoBehaviour
     public Button rocketcontrolRegular;
     public Button rocketcontrolLarge;
     public Button launch;
+    public Button menu;
+    public Button restart;
+    public Button quit;
 
     //GameObjects
     public GameObject SmallT;
@@ -97,6 +101,10 @@ public class ButtonClicked : MonoBehaviour
     {
         realThrust = thrustValue - rocketWieght;
         rocket = ParentObject.transform;
+        maxHeightReached.gameObject.SetActive(false);
+        menu.gameObject.SetActive(false);
+        restart.gameObject.SetActive(false);
+        quit.gameObject.SetActive(false);
 
         thrusterSmall.onClick.AddListener(GenerateST);
         thrusterRegular.onClick.AddListener(GenerateRT);
@@ -118,7 +126,7 @@ public class ButtonClicked : MonoBehaviour
 
     void Update()
     {
-        if (rocket.position.y > maxHeight)
+        if (rocket.position.y >= maxHeight)
         {
             maxHeight = rocket.position.y;
         }
@@ -133,6 +141,12 @@ public class ButtonClicked : MonoBehaviour
             //call code that will happen once after reaching max height
 
             maxReached = false;
+            //Debug.Log(" max hight reached good to go for other code");
+            ParentObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+            maxHeightReached.gameObject.SetActive(true);
+            menu.gameObject.SetActive(true);
+            restart.gameObject.SetActive(true);
+            quit.gameObject.SetActive(true);
         }
 
         rocketHeight = rocket.position.y;
